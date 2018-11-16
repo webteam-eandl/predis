@@ -52,6 +52,7 @@ class HashKey extends CursorBasedIterator
     {
         $this->position = key($this->elements);
         $this->current = current($this->elements);
+        next($this->elements);
 
         unset($this->elements[$this->position]);
     }
